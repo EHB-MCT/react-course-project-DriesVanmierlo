@@ -1,17 +1,27 @@
+@import url("https://use.typekit.net/bcj6wug.css");
+
 :root {
-    --dark-blue: #171A21;
-    --darker-blue: #1D4157;
+    --darker-blue: #171A21;
+    --darke-blue: #1B2838;
+    --dark-blue: #1D4157;
     --blue: #3B6490;
     --light-blue: #67C1F5;
     --white: #ffffff;
+    --black: #000000;
+    --dark-gray: #101010;
     --dark-green: #5B7E10;
     --light-green: #A0E047;
+  }
+
+  .App {
+      background-color: var(--darke-blue);
+      font-family: 'motiva sans';
   }
 
 /* HEADER */
 
 .header-nav {
-    background-color: var(--dark-blue);   
+    background-color: var(--darker-blue);   
 }
 
 .header-nav-container{
@@ -57,7 +67,7 @@
 }
 
 #search-button {
-    background-color: var(--darker-blue);
+    background-color: var(--dark-blue);
     color: var(--light-blue);
     padding: 0.5em 1em;
     border-radius: 5px;
@@ -84,4 +94,103 @@
     object-fit: cover;
     -o-object-position: center;
     object-position: center;
+}
+
+/* MAIN */
+
+/* FILTERS */
+
+.main-filters-container {
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+
+.main-filters-container form {
+    margin-right: 100px;
+}
+
+.main-filters-container label {
+    color: var(--light-blue);
+    margin-right: 15px;
+}
+
+.main-filters-container select {
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    color: var(--light-blue);
+    width: 210px;
+}
+
+/* GAME ITEM */
+
+.game-item-container {
+    width: 250px;
+    background: linear-gradient(90deg, var(--darker-blue), var(--darke-blue));
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px var(--dark-gray);
+    height: 275px;
+    position: relative;
+}
+
+.game-item-container a {
+    color: var(--light-blue);
+    text-decoration: none;
+}
+
+.game-item-cover figure {
+    margin: 0;
+    position: relative;
+}
+
+.game-item-cover img {
+    width: 250px;
+    height: 175px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.game-item-sale-tag {
+    color: var(--light-blue);
+    background-color: var(--blue);
+    padding: 0.2em 0.4em;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    z-index: 10;
+    margin: 0;
+    border-radius: 0px 5px 0px 5px;
+}
+
+.game-item-title {
+    font-weight: 600;
+    margin: 0;
+    margin-left: 10px;
+    font-size: 1em;
+}
+
+.game-item-prices {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    align-items: center;
+}
+
+.game-item-price {
+    color: var(--blue);
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.game-item-new-price {
+    color: var(--light-green);
+    background-color: var(--dark-green);
+    padding: 0.2em 0.4em;
+    border-radius: 5px;
 }
