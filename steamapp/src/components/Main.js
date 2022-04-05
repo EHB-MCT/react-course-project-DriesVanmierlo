@@ -1,4 +1,5 @@
 import GameCarrousel from "./GameCarrousel";
+import HighlightGames from "./HighlightGames";
 
 function MainFilters(){
 
@@ -39,6 +40,7 @@ function Main(){
         <div className="main">
             <MainFilters />
             <GameCarrousel />
+            <HighlightGames />
             <GameCarrousel />
             <GameCarrousel />
             <GameCarrousel />
