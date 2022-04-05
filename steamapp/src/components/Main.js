@@ -1,4 +1,4 @@
-import GameItem from "./GameItem";
+import GameCarrousel from "./GameCarrousel";
 
 function MainFilters(){
 
@@ -36,7 +36,13 @@ function MainFilters(){
 
 function Main(){
     return (
-        <MainFilters />
+        <div className="main">
+            <MainFilters />
+            <GameCarrousel />
+            <GameCarrousel />
+            <GameCarrousel />
+            <GameCarrousel />
+        </div>
     );
 }
 
