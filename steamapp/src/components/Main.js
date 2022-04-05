@@ -39,11 +39,11 @@ function Main(){
     return (
         <div className="main">
             <MainFilters />
-            <GameCarrousel />
+            <GameCarrousel title="Speciale aanbiedingen" />
             <HighlightGames />
-            <GameCarrousel />
-            <GameCarrousel />
-            <GameCarrousel />
+            <GameCarrousel title="Bestverkocht" />
+            <GameCarrousel title="Nieuwe uitgaven" />
+            <GameCarrousel title="Aanbevelingen" />
         </div>
     );
 }

@@ -18,7 +18,7 @@
 
   .App {
       background-color: var(--darke-blue);
-      font-family: 'motiva sans';
+      font-family: 'motiva sans', sans-serif;
   }
 
 /* HEADER */

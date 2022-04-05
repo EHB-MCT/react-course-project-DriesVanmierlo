@@ -1,9 +1,9 @@
 import GameItem from "./GameItem";
 
-function GameCarrousel(){
+function GameCarrousel(props){
     return (
         <div className = "game-carrousel-container">
-            <h1 className="game-carrousel-title">Speciale aanbiedingen</h1>
+            <h1 className="game-carrousel-title">{props.title}</h1>
             <div className="game-carrousel-items">
                 <GameItem />
                 <GameItem />
