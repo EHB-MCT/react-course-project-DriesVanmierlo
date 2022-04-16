@@ -19,7 +19,7 @@ function HighlightGame(){
                     <h2 className="highlight-game-title">{testGames.title}</h2>
                 </div>
                 <p className="highlight-game-description">{testGames.description}</p>
-                <a className="highlight-game-button" href="#">Learn more</a>
+                <button className="highlight-game-button" href="#">Learn more</button>
             </a>
         </div>
     );

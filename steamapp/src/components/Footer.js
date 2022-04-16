@@ -5,12 +5,12 @@ function Footer() {
 
     const footerMenu1 = ["Privacybeleid", "Juridische informatie", "Steam Subscriber Agreement", "Terugbetalingen", "Cookies"];
     const list1 = footerMenu1.map((a) => {
-        return <li><a href="#">{a}</a></li>
+        return <li key={a.toString()}><a href="#">{a}</a></li>
     });
 
     const footerMenu2 = ["Info over Valve", "Vacatures", "Steamworks", "Steam-distributie", "Ondersteuning","Cadeaukaarten", "Facebook", "Twitter"];
     const list2 = footerMenu2.map((a) => {
-        return <li><a href="#">{a}</a></li>
+        return <li key={a.toString()}><a href="#">{a}</a></li>
     });
 
     return (
