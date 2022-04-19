@@ -1,6 +1,6 @@
-import GameCarrousel from "./GameCarrousel";
+import GameCarrousel from "./GameCarousel";
 import HighlightGames from "./HighlightGames";
-import GetDeals from "./GameCarrousel";
+import GetDeals from "../api/GetDeals";
 
 function MainFilters(){
 
@@ -42,9 +42,9 @@ function Main(){
             <MainFilters />
             <GetDeals />
             <HighlightGames />
-            <GameCarrousel title="Bestverkocht" />
+            {/* <GameCarrousel title="Bestverkocht" />
             <GameCarrousel title="Nieuwe uitgaven" />
-            <GameCarrousel title="Aanbevelingen" />
+            <GameCarrousel title="Aanbevelingen" /> */}
         </div>
     );
 }

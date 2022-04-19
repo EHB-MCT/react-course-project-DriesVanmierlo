@@ -1,5 +1,5 @@
 import React from "react";
-import GameItem from "./GameItem";
+import GameCarousel from "../components/GameCarousel";
 
 class GetDeals extends React.Component {
     constructor(props) {
@@ -37,25 +37,12 @@ class GetDeals extends React.Component {
       } else if (!isLoaded) {
         return <div>Loading...</div>;
       } else {
+          console.log("Loaded deals!", this.state.items);
         return (
-            <GameCarrousel title="Speciale aanbiedingen" data={this.state}/>
+            <GameCarousel title="Speciale aanbiedingen" data={this.state}/>
         );
       }
     }
   }
-
-function GameCarrousel(props){
-    return (
-        
-        <div className = "game-carrousel-container">
-            <h1 className="game-carrousel-title">{props.title}</h1>
-            <div className="game-carrousel-items">
-                {props.data.items?.map(item => (
-                   <GameItem data={item}/> 
-                ))}
-            </div>
-        </div>
-    );
-}
 
 export default GetDeals;
