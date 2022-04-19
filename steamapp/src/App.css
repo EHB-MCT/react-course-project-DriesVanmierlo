@@ -21,6 +21,11 @@
       font-family: 'motiva sans', sans-serif;
   }
 
+  .main-center {
+      width: 80%;
+      margin: auto;
+  }
+
 /* HEADER */
 
 .header-nav {
@@ -102,8 +107,7 @@
 /* MAIN */
 
 .main {
-    width: 80%;
-    margin: auto;
+    width: 100%;
     margin-top: 15px;
 }
 
@@ -215,18 +219,23 @@
 /* GAME CARROUSEL */
 
 .game-carrousel-title {
+    width: 80%;
+    margin: auto;
     color: var(--white);
     font-weight: 400;
     text-shadow: 0px 0px 6px var(--light-blue);
     font-size: 25px;
     margin-top: 35px;
+    margin-bottom: 10px;
+    
 }
 
 .game-carrousel-items {
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
 }
 
 /* HIGHLIGHT GAMES */
@@ -234,7 +243,6 @@
 .highlight-games-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     margin-top: 35px;
 }
 
@@ -301,6 +309,12 @@
 .highlight-game-button:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+/* SWIPER */
+
+.swiper-wrapper {
+    margin-bottom: 10px;
 }
 
 /* FOOTER */

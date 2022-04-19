@@ -28,7 +28,7 @@ function HighlightGame(){
 function HighlightGames(){
 
     return(
-        <div className="highlight-games-container">
+        <div className="highlight-games-container main-center">
             <HighlightGame />
             <HighlightGame />
         </div>

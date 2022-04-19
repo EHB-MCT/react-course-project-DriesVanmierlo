@@ -15,7 +15,7 @@ function MainFilters(){
     });
 
     return (
-        <div className="main-filters-container">
+        <div className="main-filters-container main-center">
             <form id="main-category-form">
                 <label>
                     Categorieën:
