@@ -1,7 +1,7 @@
 import React from "react";
 import GameCarousel from "../components/GameCarousel";
 
-class GetDeals extends React.Component {
+class GetTop extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -12,7 +12,7 @@ class GetDeals extends React.Component {
     }
   
     componentDidMount() {
-      fetch("https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15")
+      fetch("https://store.steampowered.com/api/getappsincategory/?category=cat_topsellers")
         .then(res => res.json())
         .then(
           (result) => {
@@ -35,14 +35,15 @@ class GetDeals extends React.Component {
       if (error) {
         return <div>Error: {error.message}</div>;
       } else if (!isLoaded) {
-        return <img src="https://medexbiotech.com/img/preloader.gif" />;
+        return <div>Loading...</div>;
       } else {
-          console.log("Loaded deals!", this.state.items);
+          console.log("Loaded Top sellers!", this.state.items);
         return (
-            <GameCarousel title="Speciale aanbiedingen" data={this.state}/>
+            <div>Top sellers are loaded!</div>
+            // <GameCarousel title="Bestverkocht" data={this.state}/>
         );
       }
     }
   }
 
-export default GetDeals;
+export default GetTop;
