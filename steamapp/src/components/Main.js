@@ -67,6 +67,21 @@ function GetTop(){
     );
 }
 
+function GetNew(){
+    const [news, setNews] = useState([]);
+
+    useEffect(() => {
+        gameService.getFeaturedCategories().then(data => {
+            console.log(data.new_releases.items);
+            setNews(data.new_releases.items);
+        })
+    }, [])
+
+    return(
+        <GameCarousel title="Nieuwe uitgaven" data={news}/>
+    );
+}
+
 function Main(){
     return (
         <div className="main">
@@ -74,9 +89,7 @@ function Main(){
             <GetDeals />
             <HighlightGames />
             <GetTop />
-            {/* <GameCarrousel title="Bestverkocht" />
-            <GameCarrousel title="Nieuwe uitgaven" />
-            <GameCarrousel title="Aanbevelingen" /> */}
+            <GetNew />
         </div>
     );
 }
