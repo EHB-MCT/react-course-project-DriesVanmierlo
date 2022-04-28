@@ -12,7 +12,7 @@ class GetTop extends React.Component {
     }
   
     componentDidMount() {
-      fetch("https://store.steampowered.com/api/getappsincategory/?category=cat_topsellers")
+      fetch("https://frontend-steam-api.herokuapp.com/apps")
         .then(res => res.json())
         .then(
           (result) => {

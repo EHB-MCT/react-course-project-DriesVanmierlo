@@ -12,7 +12,7 @@ class GetDeals extends React.Component {
     }
   
     componentDidMount() {
-      fetch("https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15")
+      fetch("https://frontend-steam-api.herokuapp.com/deals")
         .then(res => res.json())
         .then(
           (result) => {

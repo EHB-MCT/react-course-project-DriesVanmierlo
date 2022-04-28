@@ -1,6 +1,5 @@
-import GameCarrousel from "./GameCarousel";
+import GameCarousel from "./GameCarousel";
 import HighlightGames from "./HighlightGames";
-import GetDeals from "../api/GetDeals";
 import GetTop from "../api/GetTop";
 import { gameService } from "../api/GameService";
 import { useEffect, useState } from "react";
@@ -39,7 +38,7 @@ function MainFilters(){
     );
 }
 
-function GetDeals2(){
+function GetDeals(){
     const [deals, setDeals] = useState([]);
 
     useEffect(() => {
@@ -50,13 +49,8 @@ function GetDeals2(){
     }, [])
 
     return(
-        <div>
-            {deals?.map(item => {
-        return (<h3>{item.title}</h3>);
-      })}
-        </div>
+        <GameCarousel title="Speciale aanbiedingen" data={deals}/>
     );
-
 }
 
 function Main(){
@@ -66,7 +60,6 @@ function Main(){
             <GetDeals />
             <HighlightGames />
             <GetTop />
-            {/* <GetDeals2 /> */}
             {/* <GameCarrousel title="Bestverkocht" />
             <GameCarrousel title="Nieuwe uitgaven" />
             <GameCarrousel title="Aanbevelingen" /> */}

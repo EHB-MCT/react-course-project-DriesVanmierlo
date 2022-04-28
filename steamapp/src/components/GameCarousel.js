@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 
 function GameCarousel(props) {
   console.log(props);
+  
     return (
         
         <div className = "game-carrousel-container">
@@ -17,11 +18,12 @@ function GameCarousel(props) {
               modules={[Navigation, A11y]}
               spaceBetween={20}
               slidesPerView={5}
+              slidesPerGroup={5}
               navigation
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={() => console.log('slide change')}>
               
-                {props.data.items?.map(item => (
+                {props.data?.map(item => (
                   <SwiperSlide>
                      <GameItem data={item}/> 
                   </SwiperSlide>
