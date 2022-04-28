@@ -82,6 +82,21 @@ function GetNew(){
     );
 }
 
+function GetSoon(){
+    const [soons, setSoons] = useState([]);
+
+    useEffect(() => {
+        gameService.getFeaturedCategories().then(data => {
+            console.log(data.coming_soon.items);
+            setSoons(data.coming_soon.items);
+        })
+    }, [])
+
+    return(
+        <GameCarousel title="Binnenkort verwacht" data={soons}/>
+    );
+}
+
 function Main(){
     return (
         <div className="main">
@@ -90,6 +105,7 @@ function Main(){
             <HighlightGames />
             <GetTop />
             <GetNew />
+            <GetSoon />
         </div>
     );
 }

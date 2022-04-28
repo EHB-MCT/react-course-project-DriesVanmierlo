@@ -25,7 +25,7 @@ function GameCarousel(props) {
               
                 {props.data?.map(item => (
                   <SwiperSlide>
-                     <GameItem data={item}/> 
+                     <GameItem carrouselTitle={props.title} data={item}/> 
                   </SwiperSlide>
                 ))}
             </Swiper>
@@ -35,27 +35,3 @@ function GameCarousel(props) {
   }
 
 export default GameCarousel;
-
-/* <Swiper 
-              modules={[Navigation, A11y]}
-              spaceBetween={50}
-              slidesPerView={3}
-              navigation
-              onSwiper={(swiper) => console.log(swiper)}
-              onSlideChange={() => console.log('slide change')}>
-              <SwiperSlide></SwiperSlide>
-            </Swiper> */
-
-// function GameCarrousel(props){
-//     return (
-        
-//         <div className = "game-carrousel-container">
-//             <h1 className="game-carrousel-title">{props.title}</h1>
-//             <div className="game-carrousel-items">
-//                 {props.data.items?.map(item => (
-//                    <GameItem data={item}/> 
-//                 ))}
-//             </div>
-//         </div>
-//     );
-// }
