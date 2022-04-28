@@ -9,6 +9,14 @@ class GameService {
     async getFeaturedCategories(){
         return (await fetch(`${this.baseUrl}/featuredcategories`)).json();
     }
+
+    async getFeaturedApps(){
+        return (await fetch(`${this.baseUrl}/featuredapps`)).json();
+    }
+
+    async getDetails(appid){
+        return (await fetch(`${this.baseUrl}/game/${appid}`)).json();
+    }
 }
 
 export const gameService = new GameService();
