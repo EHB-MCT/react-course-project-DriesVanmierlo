@@ -33,11 +33,15 @@
 }
 
 .header-nav-container{
-    width: 90%;
+    width: 80%;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+.header-nav-figure {
+    margin-left: 0;
 }
 
 .header-nav-figure img{
@@ -56,10 +60,19 @@
     text-decoration: none;
     color: var(--light-blue);
     padding: 1em 2em;
+    transition: 0.5s ease;
 }
 
 .header-nav-list a:hover {
     color: var(--white);
+    text-shadow: 0px 2px 5px var(--light-blue);
+    transition: 0.5s ease;
+}
+
+#a-nav-Winkel {
+    color: var(--white);
+    text-shadow: 0px 2px 5px var(--light-blue);
+    transition: 0.5s ease;
 }
 
 .header-nav-search {
@@ -72,6 +85,12 @@
     padding: 0.5em 1em;
     border-radius: 5px;
     border: 1px solid var(--light-blue);
+    margin-right: 5px;
+    width: 250px;
+}
+
+#search-input::placeholder {
+    color: var(--light-blue);
 }
 
 #search-button {
@@ -93,11 +112,25 @@
 .header-banner-figure {
     width: 100%;
     margin: 0;
+    position: relative;
+}
+
+.header-banner-figure:before {
+    content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(transparent 75%, var(--darker-blue));
 }
 
 .header-banner-figure img {
     width: 100%;
-    height: 250px;
+    height: 300px;
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: center;
@@ -133,6 +166,10 @@
     padding: 0.5em 1em;
     color: var(--light-blue);
     width: 210px;
+}
+
+.main-filters-container option {
+    text-indent: 5px;
 }
 
 /* GAME ITEM */
@@ -188,6 +225,7 @@
     font-weight: 600;
     margin: 0;
     margin-left: 10px;
+    margin-right: 10px;
     font-size: 16px;
 }
 
@@ -311,11 +349,13 @@
     font-weight: 800;
     background-color: transparent;
     border: none;
+    transition: 0.5s ease;
 }
 
 .highlight-game-button:hover {
     text-decoration: underline;
     cursor: pointer;
+    transition: 0.5s ease;
 }
 
 /* SWIPER */

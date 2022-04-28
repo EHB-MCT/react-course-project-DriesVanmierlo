@@ -3,7 +3,7 @@ function HeaderNav(){
 
     const headerNavItemsList = ["Winkel", "Library", "Wishlist", "Profiel", "Community"];
     const list = headerNavItemsList.map((a) => {
-        return <li key={a.toString()}><a href="#">{a}</a></li>
+        return <li key={a.toString()}><a id={`a-nav-${a}`} href="#">{a}</a></li>
     });
 
     return (

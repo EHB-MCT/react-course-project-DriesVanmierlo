@@ -30,7 +30,7 @@ function GetDetails(props){
         useEffect(() => {
             gameService.getDetails(`${props.data.id}`).then(data => {
                 let appid = props.data.id;
-                console.log(data[appid].data.short_description);
+                console.log(data[appid]);
                 setDetails(data[appid].data);
             })
         }, [])
