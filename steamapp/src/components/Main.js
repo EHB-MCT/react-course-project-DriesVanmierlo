@@ -42,7 +42,6 @@ function GetDeals(){
 
     useEffect(() => {
         gameService.getFeaturedCategories().then(data => {
-            console.log(data.specials.items);
             setDeals(data.specials.items);
         })
     }, [])
@@ -57,7 +56,6 @@ function GetTop(){
 
     useEffect(() => {
         gameService.getFeaturedCategories().then(data => {
-            console.log(data.top_sellers.items);
             setTops(data.top_sellers.items);
         })
     }, [])
@@ -72,7 +70,6 @@ function GetNew(){
 
     useEffect(() => {
         gameService.getFeaturedCategories().then(data => {
-            console.log(data.new_releases.items);
             setNews(data.new_releases.items);
         })
     }, [])
@@ -87,7 +84,6 @@ function GetSoon(){
 
     useEffect(() => {
         gameService.getFeaturedCategories().then(data => {
-            console.log(data.coming_soon.items);
             setSoons(data.coming_soon.items);
         })
     }, [])
@@ -97,12 +93,31 @@ function GetSoon(){
     );
 }
 
+function GetHighlightApps(){
+    const [apps, setApps] = useState([]);
+
+    useEffect(() => {
+        gameService.getFeaturedApps().then(data => {
+            console.log(data.featured_win);
+            let dataList = [];
+            dataList.push(data.featured_win[0]);
+            dataList.push(data.featured_win[1]);
+            setApps(dataList);
+        })
+    }, [])
+
+        return(
+            <HighlightGames data={apps} />
+        );
+    
+}
+
 function Main(){
     return (
         <div className="main">
             <MainFilters />
             <GetDeals />
-            <HighlightGames />
+            <GetHighlightApps />
             <GetTop />
             <GetNew />
             <GetSoon />

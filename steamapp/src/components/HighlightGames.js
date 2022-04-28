@@ -3,14 +3,6 @@ import { useEffect, useState } from "react";
 
 function HighlightGame(props){
 
-    const testGames = {
-        title: "Assetto Corsa",
-        description: "This is an awesome game to race competive against each other! This is an awesome game to race competive against each other!",
-        price: 21.98,
-        image: "https://www.yuplay.com/media/products/profile/249622/ab251f62d7bcc514bf7f1de4348bd464.jpg",
-        sale: 50
-    }
-
     console.log(props);
 
     return(
@@ -23,7 +15,7 @@ function HighlightGame(props){
                     <p className="highlight-game-tag">New!</p>
                     <h2 className="highlight-game-title">{props.data.name}</h2>
                 </div>
-                <p className="highlight-game-description">{<GetDetails id={props.data.id} />}</p>
+                <p className="highlight-game-description">{props.details.short_description}</p>
                 <button className="highlight-game-button" href="#">Learn more</button>
             </a>
         </div>
@@ -31,44 +23,51 @@ function HighlightGame(props){
 }
 
 function GetDetails(props){
+    console.log(props);
+
     const [details, setDetails] = useState([]);
     
         useEffect(() => {
-            gameService.getDetails(props.id).then(data => {
-                let appid = props.id;
+            gameService.getDetails(`${props.data.id}`).then(data => {
+                let appid = props.data.id;
                 console.log(data[appid].data.short_description);
-                setDetails(data[appid].data.short_description);
+                setDetails(data[appid].data);
             })
         }, [])
 
     return(
-        `${details}`
+        <HighlightGame data={props.data} details={details}/>
     );
 }
 
-function GetApps(){
-        const [apps, setApps] = useState([]);
+// function GetApps(){
+//         const [apps, setApps] = useState([]);
     
-        useEffect(() => {
-            gameService.getFeaturedApps().then(data => {
-                console.log(data.featured_win);
-                setApps(data.featured_win);
-            })
-        }, [])
+//         useEffect(() => {
+//             gameService.getFeaturedApps().then(data => {
+//                 console.log(data.featured_win);
+//                 setApps(data.featured_win);
+//             })
+//         }, [])
     
-            return(
-                <div className="highlight-games-container main-center">
-                    <HighlightGame data={apps[0]}/>
-                    <HighlightGame data={apps[1]}/>
-                </div>
+//             return(
+//                 <div className="highlight-games-container main-center">
+//                     <GetDetails expiration={apps[0].discount_expiration} id={apps[0].id}/>
+//                     {/* <HighlightGame data={apps[1]}/> */}
+//                 </div>
                 
-            );
+//             );
         
-    }
-function HighlightGames(){
+//     }
+
+function HighlightGames(props){
+console.log(props);
     return(
-        // <div className="highlight-games-container main-center"></div>
-        <GetApps />
+        <div className="highlight-games-container main-center">
+            {props.data?.map(item => (
+                <GetDetails data={item}/>
+            ))}
+        </div>
     );
 }
 
