@@ -1,6 +1,5 @@
 import GameCarousel from "./GameCarousel";
 import HighlightGames from "./HighlightGames";
-import GetTop from "../api/GetTop";
 import { gameService } from "../api/GameService";
 import { useEffect, useState } from "react";
 
@@ -42,14 +41,29 @@ function GetDeals(){
     const [deals, setDeals] = useState([]);
 
     useEffect(() => {
-        gameService.getDeals().then(data => {
-            console.log(data);
-            setDeals(data);
+        gameService.getFeaturedCategories().then(data => {
+            console.log(data.specials.items);
+            setDeals(data.specials.items);
         })
     }, [])
 
     return(
         <GameCarousel title="Speciale aanbiedingen" data={deals}/>
+    );
+}
+
+function GetTop(){
+    const [tops, setTops] = useState([]);
+
+    useEffect(() => {
+        gameService.getFeaturedCategories().then(data => {
+            console.log(data.top_sellers.items);
+            setTops(data.top_sellers.items);
+        })
+    }, [])
+
+    return(
+        <GameCarousel title="Bestverkocht" data={tops}/>
     );
 }
 
