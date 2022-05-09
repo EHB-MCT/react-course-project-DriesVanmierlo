@@ -2,6 +2,7 @@ import GameCarousel from "./GameCarousel";
 import HighlightGames from "./HighlightGames";
 import { gameService } from "../api/GameService";
 import { useEffect, useState } from "react";
+import { RaceBy } from '@uiball/loaders';
 
 function MainFilters(){
 
@@ -126,7 +127,14 @@ function Main(){
 
 if(isLoading){
     return (
-        <div className="loading-animation">Still loading!</div>
+        <div className="loading-animation">
+            <RaceBy 
+             size={80}
+             lineWeight={5}
+             speed={1.4} 
+             color='#67C1F5 '
+            />
+        </div>
     )
 } else {
     return (
