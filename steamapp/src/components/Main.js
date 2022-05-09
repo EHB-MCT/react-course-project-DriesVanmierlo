@@ -96,6 +96,8 @@ function GetSoon(){
 function GetHighlightApps(){
     const [apps, setApps] = useState([]);
 
+    
+
     useEffect(() => {
         gameService.getFeaturedApps().then(data => {
             console.log(data.featured_win);
@@ -113,6 +115,20 @@ function GetHighlightApps(){
 }
 
 function Main(){
+    const [isLoading, setLoading] = useState(true);
+
+    useEffect(() => {
+        gameService.getFeaturedCategories().then(data => {
+            console.log(data);
+            setLoading(false);
+        })
+    }, [])
+
+if(isLoading){
+    return (
+        <div className="loading-animation">Still loading!</div>
+    )
+} else {
     return (
         <div className="main">
             <MainFilters />
@@ -123,6 +139,8 @@ function Main(){
             <GetSoon />
         </div>
     );
+}
+    
 }
 
 export default Main;

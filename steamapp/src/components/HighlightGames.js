@@ -40,26 +40,6 @@ function GetDetails(props){
     );
 }
 
-// function GetApps(){
-//         const [apps, setApps] = useState([]);
-    
-//         useEffect(() => {
-//             gameService.getFeaturedApps().then(data => {
-//                 console.log(data.featured_win);
-//                 setApps(data.featured_win);
-//             })
-//         }, [])
-    
-//             return(
-//                 <div className="highlight-games-container main-center">
-//                     <GetDetails expiration={apps[0].discount_expiration} id={apps[0].id}/>
-//                     {/* <HighlightGame data={apps[1]}/> */}
-//                 </div>
-                
-//             );
-        
-//     }
-
 function HighlightGames(props){
 console.log(props);
     return(
