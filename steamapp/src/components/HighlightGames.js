@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 
 function HighlightGame(props){
 
-    console.log(props);
-
     return(
         <div className="highlight-game-container">
             <a href="#">
@@ -16,14 +14,13 @@ function HighlightGame(props){
                     <h2 className="highlight-game-title">{props.data.name}</h2>
                 </div>
                 <p className="highlight-game-description">{props.details.short_description}</p>
-                <button className="highlight-game-button" href="#">Learn more</button>
+                <a className="highlight-game-button" href="#">Learn more</a>
             </a>
         </div>
     );
 }
 
 function GetDetails(props){
-    console.log(props);
 
     const [details, setDetails] = useState([]);
     
@@ -41,7 +38,6 @@ function GetDetails(props){
 }
 
 function HighlightGames(props){
-console.log(props);
     return(
         <div className="highlight-games-container main-center">
             {props.data?.map(item => (

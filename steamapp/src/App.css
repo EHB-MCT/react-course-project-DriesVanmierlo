@@ -51,6 +51,7 @@
 
 .header-nav-list {
     display: flex;
+    padding-left: 0;
 }
 
 .header-nav-list li {
@@ -87,7 +88,7 @@
     border-radius: 5px;
     border: 1px solid var(--light-blue);
     margin-right: 5px;
-    width: 250px;
+    width: 100%;
 }
 
 #search-input::placeholder {
@@ -100,6 +101,15 @@
     padding: 0.5em 1em;
     border-radius: 5px;
     border: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    transition: 0.5s ease;
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    box-shadow: 0px 2px 5px var(--white);
 }
 
 #download-button {
@@ -108,12 +118,22 @@
     padding: 0.5em 1em;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#download-button:hover {
+    box-shadow: 0px 2px 5px var(--white);
+    transition: 0.5s ease;
+    background-color: var(--light-green);
+    color: var(--dark-green);
 }
 
 .header-banner-figure {
     width: 100%;
     margin: 0;
     position: relative;
+    cursor: pointer;
 }
 
 .header-banner-figure:before {
@@ -167,6 +187,13 @@
     padding: 0.5em 1em;
     color: var(--light-blue);
     width: 210px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.main-filters-container select:hover {
+    box-shadow: 0px 2px 5px var(--light-blue);
+    transition: 0.5s ease;
 }
 
 .main-filters-container option {
@@ -312,6 +339,12 @@
     object-position: center;
     border-radius: 10px;
     box-shadow: 0px 3px 6px var(--dark-gray);
+    transition: 0.5s ease;
+}
+
+.highlight-game-container a:hover img {
+    box-shadow: 0px 2px 5px var(--light-blue);
+    transition: 0.5s ease;
 }
 
 .highlight-game-header {

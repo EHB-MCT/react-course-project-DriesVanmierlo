@@ -120,7 +120,6 @@ function Main(){
 
     useEffect(() => {
         gameService.getFeaturedCategories().then(data => {
-            console.log(data);
             setLoading(false);
         })
     }, [])
@@ -132,7 +131,7 @@ if(isLoading){
              size={80}
              lineWeight={5}
              speed={1.4} 
-             color='#67C1F5 '
+             color='#67C1F5'
             />
         </div>
     )
