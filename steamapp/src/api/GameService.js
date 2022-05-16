@@ -15,7 +15,7 @@ class GameService {
     }
 
     async getDetails(appid){
-        return (await fetch(`${this.baseUrl}/game/${appid}`)).json();
+        return (await fetch(`${this.baseUrl}/game/${appid}&currency=3`)).json();
     }
 }
 
