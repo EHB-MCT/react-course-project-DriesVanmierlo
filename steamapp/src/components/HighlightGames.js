@@ -14,7 +14,7 @@ function HighlightGame(props){
                     <h2 className="highlight-game-title">{props.data.name}</h2>
                 </div>
                 <p className="highlight-game-description">{props.details.short_description}</p>
-                <a className="highlight-game-button" href="#">Learn more</a>
+                <p className="highlight-game-button">Learn more</p>
             </a>
         </div>
     );
