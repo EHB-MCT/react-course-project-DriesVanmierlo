@@ -5,7 +5,7 @@ function HighlightGame(props){
 
     return(
         <div className="highlight-game-container">
-            <a href="#">
+            <a href={"https://steam-redesign-angular.web.app/game/" + props.data.id}>
                 <figure className="highlight-game-figure">
                     <img src={props.data.large_capsule_image} />
                 </figure>

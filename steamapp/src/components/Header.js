@@ -1,19 +1,28 @@
 
 function HeaderNav(){
 
-    const headerNavItemsList = ["Winkel", "Library", "Wishlist", "Profiel", "Community"];
-    const list = headerNavItemsList.map((a) => {
-        return <li key={a.toString()}><a id={`a-nav-${a}`} href="#">{a}</a></li>
-    });
-
     return (
         <div className="header-nav">
             <div className="header-nav-container">
                 <figure className="header-nav-figure">
-                    <img src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" />
+                    <a href="#"><img src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" /></a>
                 </figure>
                 <ul className="header-nav-list">
-                    {list}
+                    <li key={'Winkel'}>
+                        <a id="a-nav-Winkel" href="#">Winkel</a>
+                    </li>
+                    <li key={'Library'}>
+                        <a id="a-nav-Library" href="https://steam-redesign-angular.web.app/library">Library</a>
+                    </li>
+                    <li key={'Wishlist'}>
+                        <a id="a-nav-Wishlist" href="https://steam-redesign-angular.web.app/">Wishlist</a>
+                    </li>
+                    <li key={'Profiel'}>
+                        <a id="a-nav-Profiel" href="https://steam-redesign-angular.web.app/">Profiel</a>
+                    </li>
+                    <li key={'Community'}>
+                        <a id="a-nav-Community" href="https://steam-redesign-angular.web.app/">Community</a>
+                    </li>
                 </ul>
                 <form className="header-nav-search">
                     <input id="search-input" placeholder="Zoek..."/>

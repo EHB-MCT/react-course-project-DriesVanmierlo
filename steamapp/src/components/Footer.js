@@ -27,6 +27,7 @@ function Footer() {
                 <p>© 2022 Valve Corporation. Alle rechten voorbehouden. Alle handelsmerken zijn eigendom van hun respectieve eigenaren in de Verenigde Staten en andere landen. BTW indien van toepassing inbegrepen. </p>
                 <ul>{list1}</ul>
                 <ul>{list2}</ul>
+            <p>Made by Dries Vanmierlo</p>
             </div>
         </footer>
     );

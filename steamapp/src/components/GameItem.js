@@ -5,7 +5,7 @@ function GameItem(props){
     if(props.data.discount_percent > 0){ 
         return (
             <div key={props.data.id} className="game-item-container">
-                <a href="#">
+                <a href={"https://steam-redesign-angular.web.app/game/" + props.data.id}>
                     <div className="game-item-cover">
                         <figure>
                             <img src={props.data.header_image} />
@@ -23,7 +23,7 @@ function GameItem(props){
     } else if (props.data.final_price > 0) {
         return (
             <div key={props.data.id} className="game-item-container">
-                <a href="#">
+                <a href={"https://steam-redesign-angular.web.app/game/" + props.data.id}>
                     <div className="game-item-cover">
                         <figure>
                             <img src={props.data.header_image} />
@@ -39,7 +39,7 @@ function GameItem(props){
     } else if(props.carrouselTitle == "Binnenkort verwacht") {
         return (
             <div key={props.data.id} className="game-item-container">
-                <a href="#">
+                <a href={"https://steam-redesign-angular.web.app/game/" + props.data.id}>
                     <div className="game-item-cover">
                         <figure>
                             <img src={props.data.header_image} />
@@ -52,7 +52,7 @@ function GameItem(props){
     } else {
         return (
             <div key={props.data.id} className="game-item-container">
-                <a href="#">
+                <a href={"https://steam-redesign-angular.web.app/game/" + props.data.id}>
                     <div className="game-item-cover">
                         <figure>
                             <img src={props.data.header_image} />
