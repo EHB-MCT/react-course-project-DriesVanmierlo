@@ -101,7 +101,6 @@ function GetHighlightApps(){
 
     useEffect(() => {
         gameService.getFeaturedApps().then(data => {
-            console.log(data.featured_win);
             let dataList = [];
             dataList.push(data.featured_win[0]);
             dataList.push(data.featured_win[1]);

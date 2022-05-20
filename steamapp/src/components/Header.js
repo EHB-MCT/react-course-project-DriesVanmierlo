@@ -37,9 +37,11 @@ function HeaderNav(){
 function HeaderBanner (){
     return (
         <div className="header-banner-container">
-            <figure className="header-banner-figure">
+            <a href="https://steam-redesign-angular.web.app/game/1426210">
+                <figure className="header-banner-figure">
                 <img src="https://www.gamepitt.co.uk/wp-content/uploads/2021/03/it-takes-two-banner.jpg" />
-            </figure>
+                </figure>
+            </a>
         </div>
     );
 }

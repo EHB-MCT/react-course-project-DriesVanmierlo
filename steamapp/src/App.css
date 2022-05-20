@@ -458,6 +458,15 @@
     text-decoration: underline;
 }
 
+.footer-linkedin {
+    text-decoration: none;
+    color: var(--light-gray);
+}
+
+.footer-linkedin:hover {
+    text-decoration: underline;
+}
+
 /*LOADER*/
 /* source: https://uiball.com/loaders */
 
