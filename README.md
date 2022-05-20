@@ -1,1 +1,7 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7507261&assignment_repo_type=AssignmentRepo)
+Bronnen:
+- Loading animation: https://uiball.com/loaders 
+  Ik heb deze bron gebruikt om loading animaties te maken wanneer er data gefetched moet worden.
+- Swiper library: https://swiperjs.com/react
+  Ik heb deze bron/library gebruikt om een carousel te maken van game items.
+- Hooks: https://reactjs.org/docs/hooks-overview.html
+  Ik heb deze bron gebruikt om mij te helpen gebruik maken van hooks om bijvoorbeeld data te fetchen met een service.
